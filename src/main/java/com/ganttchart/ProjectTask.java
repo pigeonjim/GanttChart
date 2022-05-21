@@ -39,6 +39,12 @@ public class ProjectTask {
         this.projectedEndDate = projectedEndDate;
     }
 
+    public void setProjectedEndDate(){
+        if(this.daysToComplete > 0){
+            projectedEndDate = taskStartDate.plusDays(daysToComplete);
+        }
+    }
+
     public void setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
     }
