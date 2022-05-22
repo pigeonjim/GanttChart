@@ -18,9 +18,9 @@ public class GanttApplication extends Application{
             System.out.println(e.getErrorCode() + " " + e.getCause());
         }
         try{
-            dbIO.insertARow("Task 1", LocalDate.of(2022,05,15), 45);
-            dbIO.insertARow("Task 2", LocalDate.of(2022,06,15), 30);
-            dbIO.insertARow("Task 3", LocalDate.of(2022,07,15), 15);
+            dbIO.insertARow_NsdDtoC("Task 1", LocalDate.of(2022,05,15), 45);
+            dbIO.insertARow_NsdDtoC("Task 2", LocalDate.of(2022,06,15), 30);
+            dbIO.insertARow_NsdDtoC("Task 3", LocalDate.of(2022,07,15), 15);
         } catch (SQLException e){
             System.out.println(e.getErrorCode() + " " + e.getCause());
         }

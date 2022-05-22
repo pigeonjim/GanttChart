@@ -35,7 +35,7 @@ public class IOLogic {
         }
     }
 
-    public void insertARow(String taskName, LocalDate startDate, int daysToComplete) throws SQLException{
+    public void insertARow_NsdDtoC(String taskName, LocalDate startDate, int daysToComplete) throws SQLException{
         String sqlQuery = "INSERT INTO Tasks (taskName, startDate, daysToComplete) VALUES ('" +
                 taskName + "', '" + Date.valueOf(startDate) + "', " + daysToComplete + ")";
         Statement query =   connection.createStatement();
