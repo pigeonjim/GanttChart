@@ -8,25 +8,27 @@ public class ProjectTask {
     private TaskTypes taskType;
     private int daysToComplete;
 
-    public ProjectTask(LocalDate taskStartDate, LocalDate projectedEndDate, String taskName){
-        this.taskStartDate = taskStartDate;
-        this.projectedEndDate = projectedEndDate;
+    public ProjectTask(String taskName, LocalDate taskStartDate){
         this.taskName = taskName;
+        this.taskStartDate = taskStartDate;
+    }
+    public ProjectTask( String taskName, LocalDate taskStartDate, LocalDate projectedEndDate){
+        this(taskName, taskStartDate);
+        this.projectedEndDate = projectedEndDate;
         this.daysToComplete = 0;
     }
     public ProjectTask(LocalDate taskStartDate, LocalDate projectedEndDate, String taskName,
                        String description){
-        this(taskStartDate,projectedEndDate,taskName);
+        this(taskName,taskStartDate,projectedEndDate);
         this.taskDescription = description;
     }
-    public ProjectTask(LocalDate taskStartDate, int daysToComplete, String taskName){
-        this.taskStartDate = taskStartDate;
+    public ProjectTask(String taskName, LocalDate taskStartDate, int daysToComplete){
+        this(taskName, taskStartDate);
         this.daysToComplete = daysToComplete;
-        this.taskName = taskName;
     }
     public ProjectTask(LocalDate taskStartDate, int daysToComplete, String taskName,
                        String description){
-        this(taskStartDate,daysToComplete,taskName);
+        this(taskName, taskStartDate,daysToComplete);
         this.taskDescription = description;
     }
 
