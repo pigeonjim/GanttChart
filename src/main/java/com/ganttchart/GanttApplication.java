@@ -19,8 +19,6 @@ public class GanttApplication extends Application{
         MainUI mainUI = new MainUI(allTasks);
         DrawTimeBars drawTimeBars = new DrawTimeBars();
 
-
-
         Scene mainView = new Scene(mainUI.getView());
         stage.setScene(mainView);
         stage.show();
